@@ -23,11 +23,12 @@ class BaseVC <T : UIView > : UIViewController , StatusApi {
     }
     
     func showLoading() {
-        
+        Loading.instance.showLoading(view: self.mainView)
     }
     
     func hideLoading() {
         refreshController?.endRefreshing()
+        Loading.instance.hideLoading()
     }
     
     func showProgress() {
