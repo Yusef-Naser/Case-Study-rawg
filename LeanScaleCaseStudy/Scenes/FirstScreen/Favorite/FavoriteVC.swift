@@ -91,6 +91,8 @@ extension FavoriteVC :NSFetchedResultsControllerDelegate {
             mainView.tableView.reloadRows(at: [indexPath!], with: .fade)
         case .move:
             mainView.tableView.moveRow(at: indexPath!, to: newIndexPath!)
+         default:
+            break
         }
     }
     
@@ -101,6 +103,8 @@ extension FavoriteVC :NSFetchedResultsControllerDelegate {
         case .delete: mainView.tableView.deleteSections(indexSet, with: .fade)
         case .update, .move:
             fatalError("Invalid change type in controller(_:didChange:atSectionIndex:for:). Only .insert or .delete should be possible.")
+        default:
+            break
         }
     }
     
