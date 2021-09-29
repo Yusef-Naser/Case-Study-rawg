@@ -16,7 +16,9 @@ protocol ProGameDetailsPresetner {
     func configurationView (view : GameDetailsViewConfiguration )
     func getModelGame () -> ModelGame?
     
+    
 }
+
 
 
 class GameDetailsPresenter : ProGameDetailsPresetner {
